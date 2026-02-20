@@ -1,0 +1,60 @@
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8D5A3;
+  --gold-dim: #a07830;
+  --gold-dark: #8B6914;
+  --burgundy: #5C0A21;
+  --burgundy-mid: #7a1030;
+  --burgundy-dark: #3A0614;
+  --parchment: #F5EDD6;
+  --parchment-dark: #E8D9B5;
+  --ink: #1A0A0A;
+  --cream: #FBF6E9;
+  --blue-sacred: #1E3A5F;
+  --text-muted: #7a5a3a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  background-color: var(--burgundy-dark);
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(201,168,76,0.04) 50px, rgba(201,168,76,0.04) 51px),
+    repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(201,168,76,0.04) 50px, rgba(201,168,76,0.04) 51px);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--parchment-dark); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { text-shadow: 0 0 8px rgba(201,168,76,0.3); }
+  50%       { text-shadow: 0 0 22px rgba(201,168,76,0.8), 0 0 40px rgba(201,168,76,0.2); }
+}
+
+@keyframes bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-8px); }
+}
